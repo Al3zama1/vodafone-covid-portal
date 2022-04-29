@@ -5,8 +5,8 @@ import Graphs from "../rightSidebar/Graphs";
 import Center from "../center/Center";
 import "./Dashboard.css";
 import * as d3 from "d3";
-import jhuDailyReports from '../../data/jhu.csv';
-import vaccineDailyReport from '../../data/vaccineDailyReport.csv';
+import jhuDailyReports from "../../data/jhu.csv";
+import vaccineDailyReport from "../../data/vaccineDailyReport.csv";
 
 function Dashboard() {
   const [jhuData, setjhuData] = useState({
@@ -27,10 +27,6 @@ function Dashboard() {
   const owi =
     "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv";
 
-  // const jhuDailyReports = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${generateDate(
-  //   1
-  // )}.csv`;
-
   const jhuTSeriesConfirmed =
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
 
@@ -42,9 +38,6 @@ function Dashboard() {
 
   const uID_ISO_FIPS_LookUp_Table =
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv";
-
-  // const vaccineDailyReport =
-  //   "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/vaccine_data_global.csv";
 
   const vaccineTSeries =
     "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/time_series_covid19_vaccine_global.csv";
@@ -151,7 +144,9 @@ function Dashboard() {
       }
 
       //Filters out any "non-countries"
-      tempArr = tempArr.filter((d) => {return d.iso3 != ""});
+      tempArr = tempArr.filter((d) => {
+        return d.iso3 != "";
+      });
 
       // setMapData(filteredData);
 
@@ -175,9 +170,9 @@ function Dashboard() {
 
   return (
     <div id="dashboard">
-      <div id="dashboard__header">
+      {/* <div id="dashboard__header">
         <Header />
-      </div>
+      </div> */}
       <div id="left">
         <div id="left__info"></div>
 
@@ -192,10 +187,11 @@ function Dashboard() {
           loc={selected}
           countries={jhuData.countries}
           worldMap={jhuData.worldMap}
-        // mapData={mapData}
+          // mapData={mapData}
         />
       </div>
       <div id="right">
+        <h1>{selected}: Cases, Deaths, and Vaccinations</h1>
         <Graphs jhuData={jhuData} loc={selected} />
       </div>
     </div>

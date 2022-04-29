@@ -1,6 +1,8 @@
 .country {
   display: flex;
   border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  min-width: 300px;
 }
 
 .country h1 {
@@ -16,11 +18,35 @@
 
 .country:hover {
   cursor: pointer;
+  background: rgb(13, 14, 21);
+  background: radial-gradient(
+    circle,
+    rgba(13, 14, 21, 1) 0%,
+    rgba(58, 49, 51, 1) 100%
+  );
+  /* background-color: #ff6363; */
+  font-weight: bold;
 }
 
 .cSelected::before {
-  background-color: rgba(22, 95, 199, 1);
+  /* background-color: rgba(22, 95, 199, 1); */
   margin-right: 5px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.cSelected {
+  font-weight: bold;
+  background: rgb(13, 14, 21);
+  background: radial-gradient(
+    circle,
+    rgba(13, 14, 21, 1) 0%,
+    rgba(58, 49, 51, 1) 100%
+  );
 }
 
 .country__content h1 {

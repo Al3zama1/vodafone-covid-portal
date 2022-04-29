@@ -37,14 +37,14 @@ function LineGraph({ jhuData, type, owi, loc }) {
       type === "cases"
         ? "tomato"
         : type === "deaths"
-          ? "white"
-          : type === "recovered"
-            ? "yellow"
-            : "green";
+        ? "white"
+        : type === "recovered"
+        ? "yellow"
+        : "green";
     // data = unroll(data, ["date"], "value");
     if (all) {
       linegraph(all, location, "%Y-%m-%d", color, type);
-    };
+    }
     // });
   }
 
@@ -66,10 +66,12 @@ function LineGraph({ jhuData, type, owi, loc }) {
     } else if (type == "deaths") {
       graphType = "#linegraph__" + type;
       titleText = "Deaths";
-    } else if(type == "vaccines"){
+    } else if (type == "vaccines") {
       graphType = "#linegraph__" + type;
       titleText = "Vaccinations";
-    } else { console.log('no type available)')};
+    } else {
+      console.log("no type available)");
+    }
 
     var div = d3.select(graphType);
 
@@ -81,8 +83,8 @@ function LineGraph({ jhuData, type, owi, loc }) {
     //   .attr("stroke", "black")
     //   .text(titleText);
 
-    const height = 500;
-    const width = 500;
+    const height = 440;
+    const width = 400;
     const margin = {
       top: 20,
       right: 30,

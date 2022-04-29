@@ -67,23 +67,6 @@ function Graphs({ jhuData, owi, jhu, loc }) {
 
   return (
     <div id="country__graphs">
-      {/* <Box sx={{ width: "100%" }}>
-        <Box
-          sx={{ borderBottom: 1, borderColor: "divider", marginBottom: "20px" }}
-        >
-          <Tabs
-            textColor="inherit"
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label={`${loc} Line Graphs`} {...a11yProps(0)} />
-            <Tab label="world Treemaps" {...a11yProps(1)} />
-          </Tabs>
-        </Box>
-      </Box> */}
-
-      {/* {value == 0 && lineGraphs} */}
       {jhuData && (
         <LineGraph
           key={uuidv4()}
