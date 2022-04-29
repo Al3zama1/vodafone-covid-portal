@@ -83,8 +83,8 @@ function LineGraph({ jhuData, type, owi, loc }) {
     //   .attr("stroke", "black")
     //   .text(titleText);
 
-    const height = 500;
-    const width = 500;
+    const height = 440;
+    const width = 400;
     const margin = {
       top: 20,
       right: 30,
