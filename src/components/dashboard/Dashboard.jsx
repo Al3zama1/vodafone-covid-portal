@@ -191,6 +191,7 @@ function Dashboard() {
         />
       </div>
       <div id="right">
+        <h1>{selected}: Cases, Deaths, and Vaccinations</h1>
         <Graphs jhuData={jhuData} loc={selected} />
       </div>
     </div>

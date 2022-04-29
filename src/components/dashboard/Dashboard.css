@@ -8,6 +8,15 @@
   height: 80vh;
 }
 
+#right {
+  border-top: 1px solid white;
+}
+
+#right h1 {
+  margin-left: 20px;
+  /* margin-bottom: 100px; */
+}
+
 #right #country__graphs {
   width: 90vw;
   margin: auto;
