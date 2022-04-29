@@ -11,7 +11,7 @@ svg .country:hover {
   position: absolute;
   z-index: 10;
   visibility: hidden;
-  background-color: lightblue;
+  background-color: #1976d2;
   text-align: center;
   padding: 4px;
   border-radius: 4px;

@@ -51,11 +51,11 @@ function Center({ countries, loc, worldMap }) {
     let f;
 
     let colorRange = [
-      ["rgb(100, 75, 45)", "rgb(255, 75, 45)"],
-      ["rgb(220,220,220)", "rgb(112, 128, 144)"],
+      ["rgb(107, 75, 45)", "rgb(255, 74, 74)"],
+      ["rgb(255, 244, 232)", "rgb(68, 64, 62)"],
       ["rgb(46, 73, 123)", "rgb(71, 187, 94)"],
-      ["rgb(255,250,205)", "rgb(255,255,0)"],
-      ["rgb(214,201,252)", "rgb(141,104,247)"],
+      ["rgb(242, 255, 178)", "rgb(107, 75, 45)"],
+      ["rgb(209, 230, 255)", "rgb(72, 55, 68)"],
     ];
 
     if (value == 0) {
@@ -108,6 +108,24 @@ function Center({ countries, loc, worldMap }) {
         return (d.deaths/d.cases) * 100;;
       }
     });
+
+    const midType = d3.median(countries, (d) => {
+      if (value == 0) {
+        return d.cases;
+      }
+      if (value == 1) {
+        return d.deaths;
+      }
+      if (value == 2) {
+        return d.dosesAdmin;
+      }
+      if (value == 3) {
+        return (d.cases / d.population) * 100000;
+      }
+      if (value == 4) {
+        return (d.deaths/d.cases) * 100;
+      }
+    })
 
     const maxType = d3.max(countries, (d) => {
       if (value == 0) {
@@ -197,7 +215,8 @@ function Center({ countries, loc, worldMap }) {
           .style("top", window.event.y - 50 + "px")
           .style("left", window.event.x + 30 + "px")
           .text(() => {
-            return d.path[0].__data__.properties.name;
+           let country = d.path[0].__data__;
+            return country.properties.name;
           });
       })
 
