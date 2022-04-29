@@ -1,6 +1,7 @@
 .country {
   display: flex;
   border-bottom: 1px solid white;
+  min-width: 300px;
 }
 
 .country h1 {

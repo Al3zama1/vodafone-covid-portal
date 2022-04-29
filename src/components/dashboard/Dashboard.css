@@ -1,55 +1,16 @@
-#dashboard {
-  display: grid;
-  grid-template-areas:
-    "head head head"
-    "left   center right";
-  grid-template-columns: 19% 47% 33%;
-  grid-template-rows: 11vh 89vh;
-}
-
-#dashboard__header {
-  grid-area: head;
-}
-
 #left {
-  grid-area: left;
-  overflow-y: scroll;
-  background-color: rgb(26, 26, 26);
-}
-
-#left::-webkit-scrollbar {
-  width: 10px;
-}
-
-#left::-webkit-scrollbar-track {
-  background-color: transparent;
-  background-color: #5e696b;
-}
-
-#left::-webkit-scrollbar-thumb {
-  background-color: #3e4344;
-}
-
-#left::-webkit-scrollbar-thumb:hover {
-  background-color: #c05454;
+  padding-top: 20px;
+  display: flex;
+  overflow-x: scroll;
 }
 
 #center {
-  margin-left: 10px;
-  grid-area: center;
-  /* background-color: rgb(26, 26, 26); */
-  /* grid-area: center;
-  height: 500px;
-  margin-top: 100px; */
+  height: 80vh;
 }
 
-#right::-webkit-scrollbar {
-  display: none;
-}
-
-#right {
-  grid-area: right;
-  overflow-y: scroll;
-  margin-left: 10px;
-  /* background-color: rgb(26, 26, 26); */
+#right #country__graphs {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
