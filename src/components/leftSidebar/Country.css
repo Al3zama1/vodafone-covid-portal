@@ -19,6 +19,7 @@
 .country:hover {
   cursor: pointer;
   background: rgba(25, 118, 210, 0.25);
+
   background: radial-gradient(
     circle,
     rgba(25, 118, 210, 0.50), 
@@ -55,5 +56,9 @@
 }
 
 .country__statistics-cases {
-  color: d73f47;
+  color: #d73f47;
+}
+
+.country__statistics-deaths {
+    color: #aba09c;
 }
