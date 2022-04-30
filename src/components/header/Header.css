@@ -1,5 +1,9 @@
+h1{
+  font-size: 30px;
+}
+
 #header {
-  /* color: white; */
+  background-color: rgb(25, 118, 210);
 }
 
 #header__title {

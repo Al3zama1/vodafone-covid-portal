@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 svg .country:hover {
   stroke-width: 1px;
   cursor: pointer;

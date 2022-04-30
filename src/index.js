@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#ffffff"
+    },
+  },
+});
+
 ReactDOM.render(
+  <ThemeProvider theme={theme}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 

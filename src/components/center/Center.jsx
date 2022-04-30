@@ -109,24 +109,6 @@ function Center({ countries, loc, worldMap }) {
       }
     });
 
-    const midType = d3.median(countries, (d) => {
-      if (value == 0) {
-        return d.cases;
-      }
-      if (value == 1) {
-        return d.deaths;
-      }
-      if (value == 2) {
-        return d.dosesAdmin;
-      }
-      if (value == 3) {
-        return (d.cases / d.population) * 100000;
-      }
-      if (value == 4) {
-        return (d.deaths/d.cases) * 100;
-      }
-    })
-
     const maxType = d3.max(countries, (d) => {
       if (value == 0) {
         return d.cases;
@@ -334,39 +316,40 @@ function Center({ countries, loc, worldMap }) {
     setValue(newValue);
   };
 
+
   return (
-    <div
-      id="world"
-      style={{
-        marginBottom: "1rem",
-        height: "100%",
-      }}
-      ref={wrapperRef}
-    >
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            textColor="white"
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label="Cases" {...a11yProps(0)} />
-            <Tab label="Deaths" {...a11yProps(1)} />
-            <Tab label="Vaccines" {...a11yProps(2)} />
-            <Tab label="Incident Rate" {...a11yProps(3)} />
-            <Tab label="Fatality/Case Ratio" {...a11yProps(4)} />
-          </Tabs>
-        </Box>
-      </Box>
-      <svg
+      <div
+        id="world"
         style={{
-          width: width,
-          height: height,
+          marginBottom: "1rem",
+          height: "100%",
         }}
-        ref={svgRef}
-      ></svg>
-    </div>
+        ref={wrapperRef}
+      >
+        <Box sx={{ width: "100%" ,margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
+          <Box sx={{ borderBottom: 0, borderColor: "divider", margin: "15px 15px 5px 15px",padding: "0px 60px 0px 60px", backgroundColor: "#1976d2"}}>
+            <Tabs
+              textColor="white"
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab label="Cases" {...a11yProps(0)} />
+              <Tab label="Deaths" {...a11yProps(1)} />
+              <Tab label="Vaccines" {...a11yProps(2)} />
+              <Tab label="Incident Rate" {...a11yProps(3)} />
+              <Tab label="Fatality/Case Ratio" {...a11yProps(4)} />
+            </Tabs>
+          </Box>
+        </Box>
+        <svg
+          style={{
+            width: width,
+            height: height,
+          }}
+          ref={svgRef}
+        ></svg>
+      </div>
   );
 }
 
