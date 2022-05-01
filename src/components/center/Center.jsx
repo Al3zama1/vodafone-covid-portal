@@ -327,7 +327,7 @@ function Center({ countries, loc, worldMap }) {
         ref={wrapperRef}
       >
         <Box sx={{ width: "100%" ,margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
-          <Box sx={{ borderBottom: 0, borderColor: "divider", margin: "15px 15px 5px 15px",padding: "0px 60px 0px 60px", backgroundColor: "#1976d2"}}>
+          <Box sx={{ margin: "15px 15px 5px 15px",padding: "0px 15px 0px 15px", backgroundColor: "rgb(32,32,32)"}}>
             <Tabs
               textColor="white"
               value={value}
