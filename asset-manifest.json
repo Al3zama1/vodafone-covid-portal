@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/vodafone-covid-portal/static/css/main.f45040b9.chunk.css",
-    "main.js": "/vodafone-covid-portal/static/js/main.60f24997.chunk.js",
-    "main.js.map": "/vodafone-covid-portal/static/js/main.60f24997.chunk.js.map",
-    "runtime-main.js": "/vodafone-covid-portal/static/js/runtime-main.f4ef61b7.js",
-    "runtime-main.js.map": "/vodafone-covid-portal/static/js/runtime-main.f4ef61b7.js.map",
-    "static/js/2.c314bc75.chunk.js": "/vodafone-covid-portal/static/js/2.c314bc75.chunk.js",
-    "static/js/2.c314bc75.chunk.js.map": "/vodafone-covid-portal/static/js/2.c314bc75.chunk.js.map",
-    "static/js/3.f94c76f7.chunk.js": "/vodafone-covid-portal/static/js/3.f94c76f7.chunk.js",
-    "static/js/3.f94c76f7.chunk.js.map": "/vodafone-covid-portal/static/js/3.f94c76f7.chunk.js.map",
+    "main.css": "/vodafone-covid-portal/static/css/main.41d04fb3.chunk.css",
+    "main.js": "/vodafone-covid-portal/static/js/main.4c2aee6c.chunk.js",
+    "main.js.map": "/vodafone-covid-portal/static/js/main.4c2aee6c.chunk.js.map",
+    "runtime-main.js": "/vodafone-covid-portal/static/js/runtime-main.dc7ce505.js",
+    "runtime-main.js.map": "/vodafone-covid-portal/static/js/runtime-main.dc7ce505.js.map",
+    "static/js/2.b9106327.chunk.js": "/vodafone-covid-portal/static/js/2.b9106327.chunk.js",
+    "static/js/2.b9106327.chunk.js.map": "/vodafone-covid-portal/static/js/2.b9106327.chunk.js.map",
+    "static/js/3.93df4e0f.chunk.js": "/vodafone-covid-portal/static/js/3.93df4e0f.chunk.js",
+    "static/js/3.93df4e0f.chunk.js.map": "/vodafone-covid-portal/static/js/3.93df4e0f.chunk.js.map",
     "index.html": "/vodafone-covid-portal/index.html",
-    "static/css/main.f45040b9.chunk.css.map": "/vodafone-covid-portal/static/css/main.f45040b9.chunk.css.map",
-    "static/js/2.c314bc75.chunk.js.LICENSE.txt": "/vodafone-covid-portal/static/js/2.c314bc75.chunk.js.LICENSE.txt",
-    "static/media/jhu.dcedad0f.csv": "/vodafone-covid-portal/static/media/jhu.dcedad0f.csv",
+    "static/css/main.41d04fb3.chunk.css.map": "/vodafone-covid-portal/static/css/main.41d04fb3.chunk.css.map",
+    "static/js/2.b9106327.chunk.js.LICENSE.txt": "/vodafone-covid-portal/static/js/2.b9106327.chunk.js.LICENSE.txt",
+    "static/media/jhu.0eb7c668.csv": "/vodafone-covid-portal/static/media/jhu.0eb7c668.csv",
     "static/media/vaccineDailyReport.9b8786eb.csv": "/vodafone-covid-portal/static/media/vaccineDailyReport.9b8786eb.csv",
     "static/media/virus.b900566a.png": "/vodafone-covid-portal/static/media/virus.b900566a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f4ef61b7.js",
-    "static/js/2.c314bc75.chunk.js",
-    "static/css/main.f45040b9.chunk.css",
-    "static/js/main.60f24997.chunk.js"
+    "static/js/runtime-main.dc7ce505.js",
+    "static/js/2.b9106327.chunk.js",
+    "static/css/main.41d04fb3.chunk.css",
+    "static/js/main.4c2aee6c.chunk.js"
   ]
 }
