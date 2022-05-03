@@ -5,3 +5,8 @@
 #line__graphs svg {
   margin-left: 20px;
 }
+
+#right h1{
+  background-color: rgb(32, 32, 32);
+  margin: 50px 15px 50px 15px;
+}

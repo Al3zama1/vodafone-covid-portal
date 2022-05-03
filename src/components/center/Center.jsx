@@ -51,11 +51,11 @@ function Center({ countries, loc, worldMap }) {
     let f;
 
     let colorRange = [
-      ["rgb(100, 75, 45)", "rgb(255, 75, 45)"],
-      ["rgb(220,220,220)", "rgb(112, 128, 144)"],
+      ["rgb(107, 75, 45)", "rgb(255, 74, 74)"],
+      ["rgb(255, 244, 232)", "rgb(68, 64, 62)"],
       ["rgb(46, 73, 123)", "rgb(71, 187, 94)"],
-      ["rgb(255,250,205)", "rgb(255,255,0)"],
-      ["rgb(214,201,252)", "rgb(141,104,247)"],
+      ["rgb(242, 255, 178)", "rgb(107, 75, 45)"],
+      ["rgb(209, 230, 255)", "rgb(72, 55, 68)"],
     ];
 
     if (value == 0) {
@@ -197,7 +197,8 @@ function Center({ countries, loc, worldMap }) {
           .style("top", window.event.y - 50 + "px")
           .style("left", window.event.x + 30 + "px")
           .text(() => {
-            return d.path[0].__data__.properties.name;
+           let country = d.path[0].__data__;
+            return country.properties.name;
           });
       })
 
@@ -315,39 +316,40 @@ function Center({ countries, loc, worldMap }) {
     setValue(newValue);
   };
 
+
   return (
-    <div
-      id="world"
-      style={{
-        marginBottom: "1rem",
-        height: "100%",
-      }}
-      ref={wrapperRef}
-    >
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            textColor="white"
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label="Cases" {...a11yProps(0)} />
-            <Tab label="Deaths" {...a11yProps(1)} />
-            <Tab label="Vaccines" {...a11yProps(2)} />
-            <Tab label="Incident Rate" {...a11yProps(3)} />
-            <Tab label="Fatality/Case Ratio" {...a11yProps(4)} />
-          </Tabs>
-        </Box>
-      </Box>
-      <svg
+      <div
+        id="world"
         style={{
-          width: width,
-          height: height,
+          marginBottom: "1rem",
+          height: "100%",
         }}
-        ref={svgRef}
-      ></svg>
-    </div>
+        ref={wrapperRef}
+      >
+        <Box sx={{ width: "100%" ,margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
+          <Box sx={{ margin: "15px 15px 5px 15px",padding: "0px 15px 0px 15px", backgroundColor: "rgb(32,32,32)"}}>
+            <Tabs
+              textColor="white"
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab label="Cases" {...a11yProps(0)} />
+              <Tab label="Deaths" {...a11yProps(1)} />
+              <Tab label="Vaccines" {...a11yProps(2)} />
+              <Tab label="Incident Rate" {...a11yProps(3)} />
+              <Tab label="Fatality/Case Ratio" {...a11yProps(4)} />
+            </Tabs>
+          </Box>
+        </Box>
+        <svg
+          style={{
+            width: width,
+            height: height,
+          }}
+          ref={svgRef}
+        ></svg>
+      </div>
   );
 }
 

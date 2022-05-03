@@ -21,7 +21,9 @@ function Country({ country, handleClick, selected }) {
             Cases: {country.cases.toLocaleString("en-US")}
           </p>
           <p>|</p>
-          <p>Deaths: {country.deaths.toLocaleString("en-US")}</p>
+          <p className="country__statistics-deaths">
+          Deaths: {country.deaths.toLocaleString("en-US")}
+          </p>
         </div>
       </div>
     </div>

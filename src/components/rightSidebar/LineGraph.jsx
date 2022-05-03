@@ -35,12 +35,10 @@ function LineGraph({ jhuData, type, owi, loc }) {
     }
     let color =
       type === "cases"
-        ? "tomato"
+        ? "#d73f47"
         : type === "deaths"
-        ? "white"
-        : type === "recovered"
-        ? "yellow"
-        : "green";
+        ? "#aba09c"
+        : "#4a933e"
     // data = unroll(data, ["date"], "value");
     if (all) {
       linegraph(all, location, "%Y-%m-%d", color, type);
